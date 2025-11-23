@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SVG to React & React Native Converter
 
-## Getting Started
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
-First, run the development server:
+A modern, production-grade tool to instantly convert SVG code or files into clean, formatted React and React Native components. Built with Next.js, Tailwind CSS, and Prettier. **Privacy-first: All conversions happen locally in your browser.**
+
+![Project Preview](public/preview.png)
+_(Add a screenshot of your app here)_
+
+## ✨ Features
+
+- **🚀 Instant Conversion**: Real-time conversion of SVG to React and React Native components.
+- **📂 File Support**: Drag and drop `.svg` files or upload them directly.
+- **💅 Auto Formatting**: Automatically formats the output code using Prettier for consistent style.
+- **👁️ Live Preview**: See your SVG rendered instantly as you type or upload.
+- **📱 React Native Optimized**: Generates optimized React Native code with dynamic imports (only imports what is used).
+- **🌙 Dark Mode**: Fully responsive UI with a beautiful dark mode.
+- **🔒 Privacy First**: All processing is done locally in your browser. No data is ever sent to a server.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Formatting**: [Prettier](https://prettier.io/) (Standalone)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+## 🚀 Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +53,63 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Paste SVG Code**: Simply paste your raw SVG code into the input area.
+2. **Upload File**: Click the "Upload SVG File" button or drag and drop a file.
+3. **Select Output**: Choose between "React Component" or "React Native" from the dropdown.
+4. **Copy**: Click the "Copy Code" button to use it in your project.
 
-## Learn More
+## 🤝 Contributing
 
-To learn more about Next.js, take a look at the following resources:
+We welcome contributions to make this project better! Please follow these guidelines.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. Branching Strategy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Fork** the repository and clone it locally.
+- Always create your branch from `main`.
+- **Branch naming convention**:
+  - `feat/feature-name`: For new features
+  - `fix/bug-fix`: For bug fixes
+  - `docs/update-docs`: For documentation updates
+  - `refactor/refactoring`: For code refactoring
 
-## Deploy on Vercel
+### 2. Pull Request (PR) Workflow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  **Development**: Push your changes to your fork and create a PR to the `main` branch.
+2.  **Description**: Provide a clear description of the changes in the PR.
+3.  **Review**: Maintainers will review the PR. Once approved, it will be merged.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Commit Message Guidelines
+
+Use the following prefixes for clear and consistent commit messages:
+
+- `feat`: New features
+- `fix`: Bug fixes
+- `docs`: Documentation updates
+- `refactor`: Code refactoring
+- `style`: Formatting and style changes
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks
+
+Example: `feat: add drag and drop file upload`
+
+### 4. Quality Standards
+
+- Ensure the project builds without errors.
+- Check that the code formatting is consistent.
+- **CI Pipeline**: The GitHub Action CI pipeline (linting and build) must pass for all PRs.
+
+## 👥 Contributors
+
+<a href="https://github.com/MohammedAbidNafi/svg-code/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MohammedAbidNafi/svg-code" alt="Contributors" />
+</a>
+
+## 📄 License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+
+## 📧 Contact
+
+Project Link: [https://github.com/MohammedAbidNafi/svg-code](https://github.com/MohammedAbidNafi/svg-code)
