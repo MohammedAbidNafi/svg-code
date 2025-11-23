@@ -2,16 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Copy, Check, Code2, FileCode, Smartphone, Upload } from "lucide-react";
-import prettier from "prettier/standalone";
-import parserHtml from "prettier/plugins/html";
-import parserBabel from "prettier/plugins/babel";
-import parserEstree from "prettier/plugins/estree";
 
 type OutputFormat = "svg" | "react" | "reactNative";
-
-const EXAMPLE_SVG = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.3513 5.88337C16.5975 5.75839 16.6958 5.45746 16.5709 5.21122C16.4459 4.96497 16.145 4.86666 15.8987 4.99164L16.125 5.4375L16.3513 5.88337ZM2.10129 4.99164C1.85504 4.86666 1.55411 4.96497 1.42914 5.21122C1.30416 5.45746 1.40247 5.75839 1.64871 5.88337L1.875 5.4375L2.10129 4.99164ZM9.90513 8.5942L9.67884 8.14834L9.90513 8.5942ZM8.09485 8.5942L8.32113 8.14834L8.09485 8.5942ZM16.125 5.375H15.625V12.625H16.125H16.625V5.375H16.125ZM14.125 14.625V14.125H3.875V14.625V15.125H14.125V14.625ZM1.875 12.625H2.375V5.375H1.875H1.375V12.625H1.875ZM3.875 3.375V3.875H14.125V3.375V2.875H3.875V3.375ZM16.125 5.4375L15.8987 4.99164L9.67884 8.14834L9.90513 8.5942L10.1314 9.04007L16.3513 5.88337L16.125 5.4375ZM8.09485 8.5942L8.32113 8.14834L2.10129 4.99164L1.875 5.4375L1.64871 5.88337L7.86856 9.04006L8.09485 8.5942ZM1.875 5.375H2.375C2.375 4.54657 3.04657 3.875 3.875 3.875V3.375V2.875C2.49429 2.875 1.375 3.99429 1.375 5.375H1.875ZM3.875 14.625V14.125C3.04657 14.125 2.375 13.4534 2.375 12.625H1.875H1.375C1.375 14.0057 2.49429 15.125 3.875 15.125V14.625ZM16.125 12.625H15.625C15.625 13.4534 14.9534 14.125 14.125 14.125V14.625V15.125C15.5057 15.125 16.625 14.0057 16.625 12.625H16.125ZM9.90513 8.5942L9.67884 8.14834C9.25217 8.36488 8.7478 8.36488 8.32113 8.14834L8.09485 8.5942L7.86856 9.04006C8.57968 9.40097 9.4203 9.40097 10.1314 9.04007L9.90513 8.5942ZM16.125 5.375H16.625C16.625 3.99429 15.5057 2.875 14.125 2.875V3.375V3.875C14.9534 3.875 15.625 4.54657 15.625 5.375H16.125Z" fill="#242424"/>
-</svg>`;
 
 // Helper to convert kebab-case to camelCase
 const toCamelCase = (str: string) => {
@@ -31,7 +23,7 @@ const styleStringToObject = (styleString: string) => {
 };
 
 export default function SvgConverter() {
-  const [input, setInput] = useState(EXAMPLE_SVG);
+  const [input, setInput] = useState("");
   const [outputFormat, setOutputFormat] = useState<OutputFormat>("react");
   const [outputs, setOutputs] = useState({
     svg: "",
@@ -115,6 +107,11 @@ export default function SvgConverter() {
     setLoading(true);
 
     try {
+      const prettier = (await import("prettier/standalone")).default;
+      const parserHtml = (await import("prettier/plugins/html")).default;
+      const parserBabel = (await import("prettier/plugins/babel")).default;
+      const parserEstree = (await import("prettier/plugins/estree")).default;
+
       // 1. Format SVG
       let formattedSvg = code;
       try {

@@ -2,14 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  reactCompiler: true,
-  serverExternalPackages: [
-    "@svgr/core",
-    "@svgr/plugin-jsx",
-    "@babel/core",
-    "@babel/preset-typescript",
-    "prettier",
-  ],
+  reactCompiler: false,
+  transpilePackages: ["lucide-react", "prettier"],
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.optimization.minimize = false;
+    }
+    return config;
+  },
 };
 
 export default nextConfig;
