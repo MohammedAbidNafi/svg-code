@@ -6,7 +6,7 @@ A modern, production-grade tool to instantly convert SVG code or files into clea
 
 **🌐 Live Website:** [svg-code.com](https://svg-code.com)
 
-![Project Preview](public/preview.png)
+![Project Preview](/cover.png)
 
 ## ✨ Features
 
