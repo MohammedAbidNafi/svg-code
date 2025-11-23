@@ -179,6 +179,7 @@ export default function SvgConverter() {
   };
 
   const handleFileDrop = useCallback((e: React.DragEvent) => {
+    setLoading(true);
     e.preventDefault();
     setIsDragging(false);
 
@@ -194,6 +195,7 @@ export default function SvgConverter() {
   }, []);
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLoading(true);
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
