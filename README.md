@@ -7,7 +7,6 @@ A modern, production-grade tool to instantly convert SVG code or files into clea
 **🌐 Live Website:** [svg-code.com](https://svg-code.com)
 
 ![Project Preview](public/preview.png)
-_(Add a screenshot of your app here)_
 
 ## ✨ Features
 
@@ -107,6 +106,16 @@ Example: `feat: add drag and drop file upload`
 <a href="https://github.com/MohammedAbidNafi/svg-code/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MohammedAbidNafi/svg-code" alt="Contributors" />
 </a>
+
+## 💎 Credits
+
+- **Created by**: [Abid Nafi](https://abidnafi.com)
+- **Logo Designed by**: [Afzal Hashmi](https://afzal.live)
+
+## 🙏 Acknowledgements
+
+- [Lucide React](https://lucide.dev)
+- [Prettier](https://prettier.io)
 
 ## 📄 License
 
