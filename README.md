@@ -4,7 +4,7 @@
 
 A modern, production-grade tool to instantly convert SVG code or files into clean, formatted React and React Native components. Built with Next.js, Tailwind CSS, and Prettier. **Privacy-first: All conversions happen locally in your browser.**
 
-**🌐 Live Website:** [svg-code.com](https://svg-code.com)
+**🌐 Live Website:** [svg-code.dev](https://svg-code.dev)
 
 ![Project Preview](/cover.png)
 
@@ -123,5 +123,5 @@ This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) 
 
 ## 📧 Contact
 
-Website: [svg-code.com](https://svg-code.com)
+Website: [svg-code.com](https://svg-code.dev)
 Project Link: [https://github.com/MohammedAbidNafi/svg-code](https://github.com/MohammedAbidNafi/svg-code)
